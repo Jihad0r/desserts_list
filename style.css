@@ -1,0 +1,311 @@
+body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: hsl(20, 50%, 98%);
+  font-size: 12px;
+  position: relative;
+}
+.container {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+.dessert {
+  width: 70%;
+}
+h2 {
+  font-size: 30px;
+}
+.list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.list .item {
+  width: 30%;
+  margin-bottom: 20px;
+}
+.image {
+  position: relative;
+  margin-bottom: 20px;
+}
+.image > img {
+  width: 100%;
+  border-radius: 10px;
+}
+.add {
+  position: absolute;
+  justify-content: space-between;
+  text-align: center;
+  bottom: -13px;
+  right: 15%;
+  left: 15%;
+  background-color: white;
+  padding: 10px 50px;
+  border-radius: 30px;
+  border: 1px solid hsl(14, 86%, 42%);
+}
+.add img {
+  width: 16px;
+}
+.count {
+  position: absolute;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  bottom: -13px;
+  right: 15%;
+  left: 15%;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 30px;
+  background-color: hsl(14, 86%, 42%);
+}
+.count img[src="/assets/images/icon-decrement-quantity.svg"] {
+  padding: 8px 4px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.count img[src="/assets/images/icon-increment-quantity.svg"] {
+  padding: 4px 4px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.category {
+  margin-top: 10px;
+  color: #b0b0b0;
+}
+.price {
+  color: hsl(14, 86%, 42%);
+  font-weight: bold;
+}
+.cart {
+  background-color: white;
+  height: fit-content;
+  width: 20%;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+.cart img {
+  margin: 0 auto;
+  display: flex;
+}
+.cart p {
+  text-align: center;
+}
+.ordered {
+  display: none;
+}
+.ordered .order div .ordered_food {
+  display: none;
+}
+.ordered h3 {
+  font-size: 20px;
+  color: hsl(14, 86%, 42%);
+}
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(178 178 178 / 21%);
+  padding: 10px;
+}
+.order img {
+  margin: 0;
+  border: 2px solid #cdc298;
+  padding: 2px;
+  border-radius: 50%;
+}
+.order span {
+  margin-right: 10px;
+}
+.order span:first-of-type {
+  color: hsl(14, 86%, 42%);
+}
+.order span:first-of-type::after {
+  content: "x";
+  color: hsl(14, 86%, 42%);
+}
+.order span:not(:nth-child(3)) {
+  color: hsl(0, 0%, 61%);
+}
+.order span:nth-child(4):before {
+  content: "@ $";
+  color: hsl(0, 0%, 61%);
+}
+.order span:nth-child(5):before {
+  content: "$";
+  color: hsl(0, 0%, 61%);
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+.total span {
+  font-size: 20px;
+}
+.total span::before {
+  content: "$";
+  font-size: 20px;
+}
+.carbon {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffae9;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.carbon img {
+  margin: 0;
+}
+.ordered button {
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background-color: hsl(14, 86%, 42%);
+  margin-bottom: 10px;
+}
+div.confirm {
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  padding: 10px;
+  width: 30%;
+  border-radius: 10px;
+  z-index: 2;
+}
+div.confirm .images {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+div.confirm .images img:first-of-type {
+  width: 5%;
+}
+div.confirm .images img:last-of-type {
+  margin: 0;
+  border: 2px solid #cdc298;
+  width: 2%;
+  height: 2%;
+  padding: 2px;
+  border-radius: 50%;
+}
+div.confirm > div {
+  background-color: #fffae9;
+  border-radius: 10px;
+}
+.confirm h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+/* div.confirm > .order > .remove_item {
+  display: none;
+} */
+
+div.confirm .order-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+div.confirm .order-item h4 {
+  margin: 0 0 20px 0;
+}
+div.confirm .order-item span:first-of-type {
+  color: hsl(14, 86%, 42%);
+  margin-right: 10px;
+}
+div.confirm .order-item span:first-of-type::after {
+  content: "x";
+  color: hsl(14, 86%, 42%);
+}
+
+div.confirm .order-item span:not(:first-of-type)::before {
+  content: "$";
+}
+div.confirm .order-item span:last-of-type {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translate(50%, -50%);
+}
+div.confirm .ordered_food {
+  display: block;
+  border-radius: 10px;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 10px;
+}
+div.confirm .totalprice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+div.confirm .totalprice span::before {
+  content: "$";
+}
+div.confirm button {
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background-color: hsl(14, 86%, 42%);
+}
+.blackBackground {
+  width: 100%;
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  background-color: #0000008c;
+  z-index: 1;
+  bottom: 0;
+}
+@media (max-width: 1120px) {
+  .container {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .dessert {
+    width: 100%;
+  }
+  .list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .list .item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .cart {
+    background-color: white;
+    height: fit-content;
+    width: calc(100% - 12px);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  div.confirm {
+    top: 47%;
+    padding: 10px;
+    width: 92%;
+  }
+}

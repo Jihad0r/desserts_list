@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="blackBackground"></div>
+      <div class="dessert">
+        <h2>Desserts</h2>
+        <div class="list"></div>
+      </div>
+      <div class="cart">
+        <div class="no_item">
+          <h3>Your Cart (<span>0</span>)</h3>
+          <img src="/assets/images/illustration-empty-cart.svg" alt="" />
+          <p>Your added items will appear here</p>
+        </div>
+        <div class="ordered">
+          <h3>Your Cart (<span class="orders">0</span>)</h3>
+          <div class="orders"></div>
+          <div class="total">
+            <p>Order Total</p>
+            <span>0</span>
+          </div>
+          <div class="carbon">
+            <img src="/assets/images/icon-carbon-neutral.svg" alt="" /><span
+              >This is a <b>carbon-neutral</b> delivery</span
+            >
+          </div>
+
+          <button class="confirm">Confirm Order</button>
+        </div>
+      </div>
+    </div>
+    <div class="confirm">
+      <div class="images">
+        <img src="/assets/images/icon-order-confirmed.svg" alt="" />
+        <img class="remove" src="/assets/images/icon-remove-item.svg" alt="" />
+      </div>
+
+      <h3>Order Confirmed</h3>
+      <p>we hope you enjoy your food</p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
