@@ -29,7 +29,7 @@ function createProductCard(product) {
   addToCartButton.classList.add("add");
 
   let addIcon = document.createElement("img");
-  addIcon.setAttribute("src", "/assets/images/icon-add-to-cart.svg");
+  addIcon.setAttribute("src", "assets/images/icon-add-to-cart.svg");
   addToCartButton.append(addIcon, "Add to Cart");
 
   let quantityControls = document.createElement("div");
@@ -45,7 +45,7 @@ function createProductCard(product) {
   let increaseButton = document.createElement("img");
   increaseButton.setAttribute(
     "src",
-    "/assets/images/icon-increment-quantity.svg"
+    "assets/images/icon-increment-quantity.svg"
   );
 
   let quantityDisplay = document.createElement("span");
@@ -107,10 +107,10 @@ function addOrder(product, quantityControls, quantityDisplay, isNew) {
 
   let removeButton = document.createElement("img");
   removeButton.classList.add("remove_item");
-  removeButton.setAttribute("src", "/assets/images/icon-remove-item.svg");
+  removeButton.setAttribute("src", "assets/images/icon-remove-item.svg");
 
   quantityControls
-    .querySelector("img[src='/assets/images/icon-increment-quantity.svg']")
+    .querySelector("img[src='assets/images/icon-increment-quantity.svg']")
     .addEventListener("click", () => {
       currentCount++;
       quantityLabel.textContent = currentCount;
@@ -123,7 +123,7 @@ function addOrder(product, quantityControls, quantityDisplay, isNew) {
     });
 
   quantityControls
-    .querySelector("img[src='/assets/images/icon-decrement-quantity.svg']")
+    .querySelector("img[src='assets/images/icon-decrement-quantity.svg']")
     .addEventListener("click", () => {
       if (currentCount > 0) {
         currentCount--;
